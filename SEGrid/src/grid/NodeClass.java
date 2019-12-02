@@ -19,6 +19,7 @@ public void test(String n,String b) throws MalformedURLException, InterruptedExc
 	DesiredCapabilities c = new DesiredCapabilities();
 	c.setBrowserName(b);//set the browser name
 	WebDriver driver = new RemoteWebDriver(ra, c);
+	System.out.println("Opening browser");
 	driver.get("http://google.com");
 	Reporter.log(driver.getTitle(),true);
 	Thread.sleep(5000);
